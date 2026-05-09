@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Stimulus {
+  STRENGTH
+  HYPERTROPHY
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  exercises Exercise[]
+  sessions  Session[]
+  createdAt DateTime   @default(now())
+}
+
+model Exercise {
+  id               String            @id @default(cuid())
+  name             String
+  categoryId       String
+  category         Category          @relation(fields: [categoryId], references: [id])
+  sessionExercises SessionExercise[]
+  createdAt        DateTime          @default(now())
+
+  @@unique([name, categoryId])
+}
+
+model Session {
+  id               String            @id @default(cuid())
+  date             DateTime          @default(now())
+  categoryId       String
+  category         Category          @relation(fields: [categoryId], references: [id])
+  sessionExercises SessionExercise[]
+  createdAt        DateTime          @default(now())
+}
+
+model SessionExercise {
+  id         String   @id @default(cuid())
+  sessionId  String
+  session    Session  @relation(fields: [sessionId], references: [id])
+  exerciseId String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id])
+  weight     Float
+  sets       Int
+  reps       Int
+  notes      String?
+  isRecord   Boolean  @default(false)
+  stimulus   Stimulus
+  createdAt  DateTime @default(now())
+}
