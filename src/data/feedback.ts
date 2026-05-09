@@ -6,6 +6,7 @@ export const FEEDBACK = {
     INVALID_DATA: "Los datos enviados no son válidos",
     CATEGORY: {
       ALREADY_EXISTS: "La categoría ya existe",
+      NOT_GET_CATEGORIES: "Error al obtener las categorías",
     },
   },
   SUCCESS: {
