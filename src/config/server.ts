@@ -5,6 +5,8 @@ import { PORT } from "@/config/env";
 export const app = express();
 
 export function setup() {
+  app.use(express.json());
+
   app.listen(PORT, () => {
     const msg = "🚀 Servidor corriendo en el puerto:";
     console.log(colors.cyan(msg), colors.green(PORT));
