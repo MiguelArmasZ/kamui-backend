@@ -1,10 +1,16 @@
 import colors from "colors";
+import cors from "cors";
 import express from "express";
-import { PORT } from "@/config/env";
+import { FRONTEND_URL, PORT } from "@/config/env";
 
 export const app = express();
 
 export function setup() {
+  app.use(
+    cors({
+      origin: FRONTEND_URL,
+    }),
+  );
   app.use(express.json());
 
   app.listen(PORT, () => {
