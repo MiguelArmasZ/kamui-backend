@@ -14,3 +14,7 @@ export function unauthorized(res: Response) {
 export function throwRes({ msg, res, status }: ThrowRes) {
   return res.status(status).json({ msg });
 }
+
+export function invalidData(res: Response) {
+  return res.status(400).json({ msg: FEEDBACK.ERROR.INVALID_DATA });
+}

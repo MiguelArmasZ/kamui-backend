@@ -17,7 +17,6 @@ model Category {
   name      String     @unique
   exercises Exercise[]
   sessions  Session[]
-  createdAt DateTime   @default(now())
 }
 
 model Exercise {
