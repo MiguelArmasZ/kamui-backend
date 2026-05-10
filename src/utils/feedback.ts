@@ -8,11 +8,18 @@ export const FEEDBACK = {
       ALREADY_EXISTS: "La categoría ya existe",
       NOT_GET_CATEGORIES: "Error al obtener las categorías",
     },
+    EXERCISE: {
+      ALREADY_EXISTS: "El ejercicio ya existe en esta categoría",
+      NOT_GET_EXERCISES: "Error al obtener los ejercicios",
+    },
   },
   SUCCESS: {
     CATEGORY: {
       CREATED: "Categoría creada correctamente",
       DELETED_ALL: "Todas las categorías eliminadas correctamente",
+    },
+    EXERCISE: {
+      CREATED: "Ejercicio creado correctamente",
     },
   },
 };
