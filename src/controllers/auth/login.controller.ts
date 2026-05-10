@@ -1,10 +1,13 @@
 import type { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "@/config/env";
-import { FEEDBACK } from "@/data/feedback";
-import { CREDENTIALS } from "@/data/user";
+import {
+  CREDENTIALS_PASSWORD,
+  CREDENTIALS_USER,
+  JWT_SECRET,
+} from "@/config/env";
 import { throwRes } from "@/helpers/throwResponses";
 import { authSchema } from "@/schemas/auth.schema";
+import { FEEDBACK } from "@/utils/feedback";
 
 export function login(req: Request, res: Response) {
   // Validar tipos de datos y estructura
@@ -20,7 +23,7 @@ export function login(req: Request, res: Response) {
   const { password, user } = result.data;
 
   // Validar credenciales
-  if (CREDENTIALS.PASSWORD !== password || CREDENTIALS.USER !== user) {
+  if (CREDENTIALS_PASSWORD !== password || CREDENTIALS_USER !== user) {
     return throwRes({
       res,
       status: 400,

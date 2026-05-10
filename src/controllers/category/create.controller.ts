@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
-import { FEEDBACK } from "@/data/feedback";
 import { invalidData, throwRes } from "@/helpers/throwResponses";
 import { prisma } from "@/lib/prisma";
 import { categorySchema } from "@/schemas/category.schema";
+import { FEEDBACK } from "@/utils/feedback";
 
 export async function createCategory(req: Request, res: Response) {
   const result = categorySchema.safeParse(req.body);

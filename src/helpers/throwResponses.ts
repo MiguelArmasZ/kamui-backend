@@ -1,5 +1,5 @@
 import type { Response } from "express";
-import { FEEDBACK } from "@/data/feedback";
+import { FEEDBACK } from "@/utils/feedback";
 
 interface ThrowRes {
   res: Response;
