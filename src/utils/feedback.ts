@@ -12,6 +12,7 @@ export const FEEDBACK = {
   SUCCESS: {
     CATEGORY: {
       CREATED: "Categoría creada correctamente",
+      DELETED_ALL: "Todas las categorías eliminadas correctamente",
     },
   },
 };
