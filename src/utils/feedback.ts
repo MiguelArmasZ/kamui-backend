@@ -11,6 +11,8 @@ export const FEEDBACK = {
     EXERCISE: {
       ALREADY_EXISTS: "El ejercicio ya existe en esta categoría",
       NOT_GET_EXERCISES: "Error al obtener los ejercicios",
+      NOT_DELETED: "Error al eliminar el ejercicio",
+      HAS_SESSIONS: "No se puede eliminar porque hay sesiones con este ejercicio",
     },
     SESSION: {
       NOT_CREATED: "Error al guardar la sesión",
@@ -21,10 +23,13 @@ export const FEEDBACK = {
   SUCCESS: {
     CATEGORY: {
       CREATED: "Categoría creada correctamente",
+      UPDATED: "Categoría actualizada correctamente",
       DELETED_ALL: "Todas las categorías eliminadas correctamente",
     },
     EXERCISE: {
       CREATED: "Ejercicio creado correctamente",
+      UPDATED: "Ejercicio actualizado correctamente",
+      DELETED: "Ejercicio eliminado correctamente",
     },
     SESSION: {
       CREATED: "Sesión guardada correctamente",
