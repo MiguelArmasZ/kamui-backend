@@ -8,6 +8,7 @@ const serieSchema = z.object({
 const sessionExerciseSchema = z.object({
   exerciseId: z.string(),
   notes: z.string().optional(),
+  isRecord: z.boolean().default(false),
   series: z.array(serieSchema).min(1),
 });
 
