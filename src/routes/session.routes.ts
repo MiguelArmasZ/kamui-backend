@@ -5,6 +5,7 @@ import { getRecords } from "@/controllers/session/getRecords.controller";
 import { getSessionById } from "@/controllers/session/getById.controller";
 import { addExercisesToSession } from "@/controllers/session/addExercises.controller";
 import { updateSessionExercises } from "@/controllers/session/updateExercises.controller";
+import { deleteSession } from "@/controllers/session/delete.controller";
 
 export const router = Router();
 
@@ -14,3 +15,4 @@ router.get("/records", getRecords);
 router.get("/:id", getSessionById);
 router.patch("/:id", addExercisesToSession);
 router.put("/:id", updateSessionExercises);
+router.delete("/:id", deleteSession);

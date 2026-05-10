@@ -15,6 +15,7 @@ export const FEEDBACK = {
     SESSION: {
       NOT_CREATED: "Error al guardar la sesión",
       NOT_GET_SESSIONS: "Error al obtener las sesiones",
+      NOT_DELETED: "Error al eliminar la sesión",
     },
   },
   SUCCESS: {
@@ -28,6 +29,7 @@ export const FEEDBACK = {
     SESSION: {
       CREATED: "Sesión guardada correctamente",
       UPDATED: "Sesión actualizada correctamente",
+      DELETED: "Sesión eliminada correctamente",
     },
   },
 };
