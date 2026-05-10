@@ -27,6 +27,7 @@ export const FEEDBACK = {
     },
     SESSION: {
       CREATED: "Sesión guardada correctamente",
+      UPDATED: "Sesión actualizada correctamente",
     },
   },
 };

@@ -18,3 +18,7 @@ export const sessionSchema = z.object({
   categoryId: z.string(),
   exercises: z.array(sessionExerciseSchema).min(1),
 });
+
+export const addExercisesSchema = z.object({
+  exercises: z.array(sessionExerciseSchema).min(1),
+});
