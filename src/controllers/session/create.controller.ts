@@ -26,7 +26,8 @@ export async function createSession(req: Request, res: Response) {
               sets: 1,
               reps: serie.reps,
               notes: ex.notes,
-              isRecord: ex.isRecord,
+              isStrengthRecord: ex.isStrengthRecord,
+              isHypertrophyRecord: ex.isHypertrophyRecord,
               stimulus: serie.reps < 8 ? "STRENGTH" : "HYPERTROPHY",
             },
           });
