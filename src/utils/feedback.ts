@@ -12,6 +12,9 @@ export const FEEDBACK = {
       ALREADY_EXISTS: "El ejercicio ya existe en esta categoría",
       NOT_GET_EXERCISES: "Error al obtener los ejercicios",
     },
+    SESSION: {
+      NOT_CREATED: "Error al guardar la sesión",
+    },
   },
   SUCCESS: {
     CATEGORY: {
@@ -20,6 +23,9 @@ export const FEEDBACK = {
     },
     EXERCISE: {
       CREATED: "Ejercicio creado correctamente",
+    },
+    SESSION: {
+      CREATED: "Sesión guardada correctamente",
     },
   },
 };
