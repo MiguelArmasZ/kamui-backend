@@ -14,6 +14,7 @@ export const FEEDBACK = {
     },
     SESSION: {
       NOT_CREATED: "Error al guardar la sesión",
+      NOT_GET_SESSIONS: "Error al obtener las sesiones",
     },
   },
   SUCCESS: {
