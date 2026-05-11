@@ -31,8 +31,7 @@ export async function getExerciseProgress(req: Request, res: Response) {
         maxWeight: Math.max(...weights),
         volume: Math.round(volume),
       }))
-      .slice(-15);
-
+;
     return res.status(200).json(data);
   } catch {
     return throwRes({ res, status: 500, msg: FEEDBACK.ERROR.EXERCISE.NOT_GET_EXERCISES });

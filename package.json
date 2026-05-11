@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "tsx watch ./src/index.ts",
     "build": "pkgroll",
-    "start": "node ./dist/index.mjs"
+    "start": "node ./dist/index.mjs",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
